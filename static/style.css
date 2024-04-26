@@ -1,0 +1,626 @@
+
+body {
+    background-image: url('/static/background1.jpg');
+     /* Update the path accordingly */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Arial', sans-serif; /* Specify your preferred font-family */
+    margin: 0;
+    padding: 0;
+}
+
+
+
+/* Reset some default styles for the page */
+
+
+
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define page styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+}
+
+nav ul {
+    list-style: none;
+    background-color: #3498db;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    background-image: url('/static/body.jpg');
+    filter: brightness(0.8);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+section {
+    background-image: url('/static/section.jpg');
+    /* Adjust as needed */
+    /*filter: brightness(0.8);*/
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: white;
+    margin: 20px 0;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.features ul {
+    list-style: disc;
+}
+
+.testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.testimonial {
+    flex-basis: 48%;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.author {
+    font-style: italic;
+    text-align: right;
+    color: #777;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #3498db;
+    color: white;
+    width: 100%;
+}
+
+/* style.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+main.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+section.login-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+section.login-form h2 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+section.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+section.login-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.login-form button:hover {
+    background-color: #555;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+/* style.css (same as the previous CSS file) */
+
+/* ... (previous CSS styles) */
+
+main.login-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+section.login-form {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+section.login-form h2 {
+    font-size: 1.5em;
+    margin: 0;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+section.login-form label {
+    display: block;
+    text-align: left;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+section.login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+section.login-form button {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+section.login-form button:hover {
+    background-color: #555;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+}
+
+
+
+
+/*menu*/
+/* Add your custom styles for the menu page here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header {
+    text-align: center;
+    padding: 20px;
+    background-color: #f2f2f2;
+}
+p {
+    color: black;
+}
+
+.menu {
+    text-align: center;
+    padding: 20px;
+}
+
+.menu-columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.menu-item {
+    flex: 0 1 calc(50% - 20px);
+    margin: 10px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+/*.menu-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}*/
+
+.item-details {
+    text-align: left;
+}
+
+button {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.cart-details {
+    text-align: left;
+    margin-top: 20px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+/* Add this to your existing CSS or create a new style.css file */
+
+/* Style for M-Pesa number input */
+#mpesa_number {
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Style for the submit button */
+button[type="submit"] {
+    padding: 12px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green color, you can change this */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #45a049; /* Darker green color on hover, you can change this */
+}
+
+/* styles.css */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.menu {
+    background-color: #f8f8f8;
+    padding: 20px;
+}
+
+.menu h2 {
+    color: #333;
+}
+
+.menu p {
+    color: #555;
+}
+
+/*.menu-item {
+    border: 1px solid #ddd;
+    margin: 10px 0;
+    padding: 10px;
+    display: flex;
+}
+
+.menu-item img {
+    width: 100px;
+    height: auto;
+    margin-right: 10px;
+}*/
+
+.item-details h3 {
+    color: #333;
+}
+
+.item-details p {
+    color: #777;
+}
+
+.item-details label {
+    color: #555;
+}
+
+input[type="number"] {
+    width: 50px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+.cart-details {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.cart-details h3 {
+    color: #333;
+}
+
+.cart-details ul {
+    list-style: none;
+    padding: 0;
+}
+
+.cart-details li {
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.cart-details p {
+    color: #333;
+}
+
+button {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+
+
+/* You can add more styles for specific elements on the menu page as needed */
+
+
+
+
+
+/*PLACE ORDER*/
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: #41a159;
+}
+
+p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* Add additional styles as needed */
+
+
+
+
+/*contact html*/
+
+/* styles.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.contact-form {
+    max-width: 600px; /* Increased max-width for a wider form */
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 40px; /* Increased padding for more space inside the form */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center; /* Center the form contents */
+}
+
+label {
+    display: block;
+    margin-bottom: 16px; /* Increased margin-bottom for more space between labels */
+    color: #333;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px; /* Increased padding for input fields */
+    margin-bottom: 20px; /* Increased margin-bottom for more space between input fields */
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    background-color: #4caf50;
+    color: #fff;
+    padding: 12px; /* Increased padding for the submit button */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 18px; /* Increased font size for the submit button */
+}
+
+.submit-btn:hover {
+    background-color: #45a049;
+}
+
+
+
+/*about page*/
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f9f9f9; /* Background color */
+    margin: 0;
+    padding: 0;
+    color: #333; /* Text color */
+}
+
+h1 {
+    text-align: center;
+    color: #0b0d0f; /* Primary color for headings */
+}
+
+p {
+    margin-bottom: 20px;
+}
+
+a {
+    color: #4caf50; /* Secondary color for links */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

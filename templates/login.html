@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Login - Student Food Ordering and Payment System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Login to Student Food Ordering</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/register">Register</a></li>
+        </ul>
+    </nav>
+    <main class="login-page">
+        <section class="login-form">
+            <h2>Log in to Your Account</h2>
+            <form method="POST" action="/login">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <button type="submit">Login</button>
+            </form>
+            {% if error_message %}
+                <p class="error">{{ error_message }}</p>
+            {% endif %}
+        </section>
+    </main>
+    <footer>
+        &copy; 2023 Student Food Ordering and Payment System
+    </footer>
+</body>
+</html>

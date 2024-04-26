@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Food Ordering System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+    <script src="https://kit.fontawesome.com/d7d21caf6d.js" crossorigin="anonymous"></script>
+    <style>
+        .stars {
+            display: flex;
+            gap: 5px;
+            justify-content: center; /* Center align the stars */
+        }
+        .star {
+            font-size: 24px;
+            cursor: pointer;
+            color: #ddd;
+        }
+        .star:hover,
+        .star.active {
+            color: gold;
+        }
+    </style>
+</head>
+<body>
+    <section class="header">
+        <nav>
+            <div class="nav-links" id="navLinks">
+                <ul>
+                    <li><a href="#">Home</a><i class="icons fa-solid fa-home"></i></li>
+                    <li><a href="/register">Register</a><i class="icons fa-solid fa-address-card"></i></li>
+                    <li><a href="/login">Login</a><i class="icons fa-solid fa-right-to-bracket"></i></li>                
+                    <li><a href="about">About Us</a><i class="icons fa-solid fa-users"></i></li>
+                    <li><a href="/contact">Contact</a><i class="icons fa-solid fa-phone"></i></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="text-box">
+            <h1>Welcome to the Student Food Ordering System</h1>
+            <p>Your one-stop solution for convenient food ordering!</p>
+            <a href="/register" class="hero-btn">Join Us Today</a>
+        </div>
+    </section>
+
+    <main>
+        <section class="features">
+            <h2>Features</h2>
+            <ul>
+                <li>Easy menu browsing</li>
+                <li>Quick and simple order placement</li>
+                <li>Secure online payment processing</li>
+                <li>Receive order status notifications</li>
+            </ul>
+            <img src="feature-image.jpg" alt="Features Image">
+        </section>
+
+        <section class="testimonials">
+            <h2>What Our Customers Say</h2>
+            <div class="testimonials-col">
+                <img src="images/person1.jpg" alt="">
+                <div>
+                    <p>"I love the convenience of ordering food with this system. It's a game-changer!"</p>
+                    <h3>- John Doe</h3>
+                    <div class="icons">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonials-col">
+                <img src="images/person2.jpg" alt="">
+                <div>
+                    <p>"The Student Food Ordering System has saved me so much time. It's fantastic!"</p>
+                    <h3>- Jane Smith</h3>
+                    <div class="icons">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="menu">
+            <h2>Our Delicious Menu</h2>
+            <p>Explore a wide variety of mouth-watering dishes in our menu. From breakfast to dinner, we have it all!</p>
+            <a href="#">View Menu</a>
+            <img src="menu-image.jpg" alt="Menu Image">
+        </section>
+
+        <section class="how-it-works">
+            <h2>How It Works</h2>
+            <p>Our system makes food ordering a breeze. Simply choose your meal, place your order, make a secure online payment, and receive notifications when your order is ready for pickup.</p>
+            <img src="how-it-works-image.jpg" alt="How It Works Image">
+        </section>
+
+        <section class="feedback">
+            <h2>Give Us Your Feedback</h2>
+            <p>We value your opinion. Please provide feedback and rate our services:</p>
+            <form id="feedbackForm">
+                <label for="feedback">Feedback:</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+
+                <label for="rating">Rating:</label>
+                <div class="stars" onclick="handleStarRating(event)">
+                    <i class="star" data-value="5">&#9733;</i>
+                    <i class="star" data-value="4">&#9733;</i>
+                    <i class="star" data-value="3">&#9733;</i>
+                    <i class="star" data-value="2">&#9733;</i>
+                    <i class="star" data-value="1">&#9733;</i>
+                </div>
+
+                <button type="button" onclick="submitFeedback()">Submit</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Student Food Ordering System</p>
+    </footer>
+
+    <script>
+        function handleStarRating(event) {
+            if (event.target.classList.contains('star')) {
+                const selectedValue = event.target.getAttribute('data-value');
+                const stars = document.querySelectorAll('.star');
+                
+                stars.forEach(star => {
+                    const value = star.getAttribute('data-value');
+                    star.classList.toggle('active', value <= selectedValue);
+                });
+            }
+        }
+
+        function submitFeedback() {
+            // Handle the feedback submission here (you can use AJAX to send data to the server)
+            alert("Feedback submitted! Thank you for your input.");
+            // You can also redirect the user or perform other actions as needed.
+        }
+    </script>
+</body>
+</html>

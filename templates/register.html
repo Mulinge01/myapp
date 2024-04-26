@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Student Food Ordering and Payment System - Registration</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Student Food Ordering and Payment System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/login">Login</a></li>
+        </ul>
+    </nav>
+    <main class="login-page">
+        <section class="login-form">
+            <h2>Register for an Account</h2>
+            <form action="/register" method="POST">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+
+                <!-- Password input with specified policy -->
+                <label for="password">Password (At least 8 characters with a combination of uppercase letters, lowercase letters, numbers, and symbols):</label>
+                <input type="password" id="password" name="password" pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$" title="Password must be at least 8 characters and include at least one uppercase letter, one lowercase letter, one number, and one symbol" required>
+
+                <label for="confirm_password">Confirm Password:</label>
+                <input type="password" id="confirm_password" name="confirm_password" required>
+
+                <button type="submit">Register</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        &copy; 2023 Student Food Ordering and Payment System
+    </footer>
+</body>
+</html>

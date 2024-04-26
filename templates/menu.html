@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+    <script src="https://kit.fontawesome.com/d7d21caf6d.js" crossorigin="anonymous"></script>
+    <title>Menu</title>
+</head>
+<body>
+    <header>
+        <h1>Our Delicious Menu</h1>
+        <p>Explore a wide variety of mouth-watering dishes in our menu. From breakfast to dinner, we have it all!</p>
+    </header>
+
+    <section class="menu">
+        <form method="POST" action="{{ url_for('menu') }}">
+            <div class="menu-columns">
+                {% for item, price in menu_items.items() %}
+                    <div class="menu-item">
+                        <!--img src="menu-image.jpg" alt="Menu Image"-->
+                        <div class="item-details">
+                            <h3>{{ item }}</h3>
+                            <p>Price: KES {{ price }}</p>
+                            <label for="{{ item }}_quantity">Quantity:</label>
+                            <input type="number" name="{{ item }}_quantity" id="{{ item }}_quantity" min="0" value="{{ selected_items.get(item, {'quantity': 0})['quantity'] }}">
+                        </div>
+                    </div>
+                    {% if loop.index % 2 == 0 and not loop.last %}
+                    </div><div class="menu-columns">
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <button type="submit">Add to Cart</button>
+        </form>
+    </section>
+
+    <section class="cart-details">
+        <h2>Your Cart</h2>
+        <ul>
+            {% for item, data in selected_items.items() %}
+                <li>{{ item }} - Quantity: {{ data['quantity'] }} - Subtotal: KES {{ data['quantity'] * data['price'] }}</li>
+            {% endfor %}
+        </ul>
+        <p>Total Price: KES {{ total_price }}</p>
+
+        <!-- M-Pesa input and order placement -->
+        <form method="POST" action="{{ url_for('place_order') }}">
+            <label for="mpesa_number">Enter M-Pesa Number (Minimum 10 digits):</label>
+            <input type="text" id="mpesa_number" name="mpesa_number" pattern="[0-9]{10,}" title="Please enter at least 10 digits" required>
+            <br>
+            <input type="hidden" name="selected_items" value="{{ selected_items }}">
+            <button type="submit">Place Order</button>
+        </form>
+    </section>
+</body>
+</html>
